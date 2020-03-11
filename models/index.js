@@ -1,7 +1,7 @@
 // connect to mongoose
-
+require('dotenv/config')
 const mongoose = require('mongoose')
-const connectionString = "mongodb+srv://rdx98:123@todosdb-9lzik.gcp.mongodb.net/test?retryWrites=true&w=majority"
+const connectionString = process.env.CONNECTION_STRING
 
 mongoose.set('debug',true)
 mongoose.set('useUnifiedTopology',true)
